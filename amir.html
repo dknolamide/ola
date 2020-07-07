@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "utf-8">
+<title> obito courseform</title>
+</head>
+<body>
+    <h2>single-line text field</h2>
+    <form>
+        <label>Favorite color: <input type="text" name="favcolor" value="Red" maxlength="50"></label>
+
+    <h2>Multiline text-entry field</h2>
+    
+        <p><label><textarea name="Consent_entry" rows="5" cols="50">The band is totally awesome!</textarea></label></p>
+    
+    <h2>Multiline text entry field with placeholder</h2>
+    
+        <label><textarea name="consent_entry" placeholder="50 words or less" rows="5" cols="50"></textarea></label>
+
+        <p><label for="form-pswd">Password:</label><br><input type="password" name="pswd" maxlength="12" id="form-pswd"></p>
+        <p><label for="email">Email:</label><br><input type="Email" name="email" maxlength="12" id="email"></p>
+        <p><label for="srch">Search:</label><br><input type="search" name="srch" maxlength="12" id="srch"></p>
+        <p><label for="fname">First Name</label><input type="First Name" name="fnamwe=" maxlength="12" id="fname"></p>
+        <p><input type="submit"> <input type="reset" value="Start over"></p>
+    
+        <p>How old are you?</p>
+        <ol>
+            <li><input type="radio" name="age" value="under24" checked> under24</li>
+            <li><input type="radio" name="age" value="25-34"> 25 to 34</li>
+            <li><input type="radio" name="age" value="35-44"> 35 to 44</li>
+            <li><input type="radio" name="age" value="over 45"> 45+</li>
+        </ol>
+
+        <p>What type of music do you listen to?</p>
+        <ol>
+            <li><input type="checkbox" name="genre" value="punk" checked> punk rock</li>
+            <li><input type="checkbox" name="genre" value="indie" checked> indie rock</li>
+        </ol>
+        <p>What is your Favorite 80's band?
+        <select name="EightiesFave" size="5" multiple>
+            <option>The cure</option>
+            <option>Cocteau Twins</option>
+            <option>Tears for fears</option>
+            <option>Thopmson Twins</option>
+            <option value="EGBT">Everything But the Girl</option>
+            <option>Depeche Mode</option>
+            <option>The Smiths</option>
+            <option>New Order</option>
+        </select>
+        </p>
+
+        <select name="Icecream" size="7" multiple>
+            <optgroup label="traditional">
+                <option>Vanilla</option>
+                <option>chocolate</option>
+            </optgroup>
+            <optgroup label="fancy">
+                <option>Super praline</option>
+                <option>Nut surprise</option>
+                <option>Candy corn</option>
+            </optgroup>
+        </select>
+        
+    </form>
+
+    <form action="/client.php" method="POST" enctype="multipart/form-data">
+        <label>send a photo to be used as online icon<em>(optional)</em><br><input type="file" name="photo"></label>
+       
+        <label>Number of guests <input type="number" name="guests" min="1" max="6"></label>
+        
+     
+     
+     
+        <label>Satisafaction (0 to 10) <input type="range" name="satisfaction" min="0" max="10"></label>
+       
+       
+        <label>Your favorite color <input type="color" name="favorite"></label>
+
+        <progress max="100" id="fave"></progress>
+    </form>
